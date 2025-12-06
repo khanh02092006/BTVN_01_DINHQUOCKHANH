@@ -11,10 +11,13 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            <div class="logo">Redo</div>
+            <div class="sidebar-header">
+                <div class="logo">Redo</div>
+                <div class="sidebar-btn">menu</div>
 
+            </div>
             <nav>
-                <ul>
+                <ul class="nav-menu">
                     <li>Brand Strategy <sup>01</sup></li>
                     <li>Personality <sup>02</sup></li>
                     <li>Logo<sup>03</sup></li>
@@ -243,6 +246,14 @@
 
 
     </div>
+    <script>
+        const menuBtn = document.querySelector('.sidebar-btn');
+        const navMenu = document.querySelector('nav');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
