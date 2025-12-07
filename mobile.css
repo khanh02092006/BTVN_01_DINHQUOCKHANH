@@ -1,0 +1,52 @@
+@media screen and (max-width: 450px) {
+    .sidebar {
+        max-width: 100%;
+        flex: none;
+        border-right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .sidebar-footer {
+        display: none;
+    }
+
+
+    .sidebar-btn {
+        display: block;
+        padding: 20px;
+        cursor: pointer;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        border-top: 1px solid #ccc;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    .nav-menu {
+        display: flex;
+
+        gap: 10px;
+        padding: 20px 30px;
+    }
+
+    .sidebar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+
+
+}

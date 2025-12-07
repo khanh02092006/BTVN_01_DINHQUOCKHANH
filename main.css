@@ -21,9 +21,7 @@
 
 .sidebar {
 
-    width: 25%;
-
-
+    max-width: 25%;
     border-right: 1px solid #9b9a9a;
 
 
@@ -277,56 +275,202 @@
     display: none;
 }
 
+.intro-wrapper5 {
+    padding: 10px;
+}
 
-@media screen and (max-width: 450px) {
-    .sidebar {
-        width: 100%;
-        flex: none;
-        border-right: 0;
-        display: flex;
-        flex-direction: column;
-    }
+.logo-boy {
+    display: flex;
+    flex: 1;
 
+}
 
-    .sidebar-footer {
-        display: none;
-    }
+.logo1 {
+    width: 50%;
+    padding: 10px;
+}
 
+.logo2 {
+    flex: 1;
+}
 
-    .sidebar-btn {
-        display: block;
-        padding: 20px;
-        cursor: pointer;
-    }
+.logo1 h2 {
+    font-size: 48px;
+    font-weight: 600;
+    align-items: center;
+    padding: 60px;
 
-    .container {
-        flex-direction: column;
-    }
+}
 
-    nav {
-        display: none;
-        width: 100%;
-        border-top: 1px solid #ccc;
-    }
+.numm3 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #d9c58b;
+}
 
-    nav.active {
-        display: block;
-    }
+.logo2 {
+    padding: 60px;
 
-    .nav-menu {
-        display: flex;
+}
 
-        gap: 10px;
-        padding: 20px 30px;
-    }
+.logo2 p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
 
-    .sidebar-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+.Primary-Lockup {
+    margin-top: 10px;
 
-    }
+}
 
+.Primary-Lockup p {
+    font-size: 24px;
 
+}
 
+.Primary-Lockup img {
+    width: 100%;
+
+}
+
+.Clearspace {
+    margin-top: 60px;
+}
+
+.Clearspace p {
+    font-size: 24px;
+
+}
+
+.Clearspace img {
+    width: 100%;
+
+}
+
+.Secondary {
+    margin-top: 60px;
+}
+
+.Secondary p {
+    font-size: 30px;
+}
+
+.Secondary img {
+    width: 100%;
+}
+
+.Incorrect-Usage {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.Incorrect-Usage h2 {
+    font-size: 24px;
+}
+
+.Incorrect {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.con {
+
+    width: 31%;
+}
+
+.con img {
+    width: 100%;
+}
+
+.con p {
+    font-size: 18px;
+
+}
+
+.intro-wrapper6 {
+    padding: 10px;
+}
+
+.colorcha {
+    display: flex;
+    flex: 1;
+
+}
+
+.color {
+    width: 50%;
+    padding: 10px;
+}
+
+.color2 {
+    flex: 1;
+}
+
+.color h2 {
+    font-size: 48px;
+    font-weight: 600;
+    align-items: center;
+    padding: 60px;
+
+}
+
+.num04 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #d9c58b;
+}
+
+.color2 {
+    padding: 60px;
+
+}
+
+.color2 p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.mau {
+    display: flex;
+    flex: 1;
+
+}
+
+.mau1,
+.mau2,
+.mau3,
+.mau4 {
+    width: 25%;
+    padding: 10px;
+}
+
+.mau1 div {
+    background-color: orangered;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+}
+
+.mau2 div {
+    background-color: blue;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+}
+
+.mau3 div {
+    background-color: rgb(202, 202, 202);
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+}
+
+.mau4 div {
+    background-color: rgb(177, 197, 255);
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
 }
