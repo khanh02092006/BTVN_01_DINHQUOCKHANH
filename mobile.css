@@ -47,6 +47,113 @@
 
     }
 
+    .intro-wrapper,
+    .intro-wrapper1,
+    .intro-wrapper2,
+    .intro-wrapper3,
+    .intro-wrapper4,
+    .intro-wrapper5,
+    .intro-wrapper6,
+    .intro-wapp,
+    .kame,
+    .llll,
+    .logo-boy,
+    .colorcha,
+    .listcolor {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .intro,
+    .intro-continued,
+    .intro1,
+    .intro-continued1,
+    .intro2,
+    .intro-continued2,
+    .intro3,
+    .intro4,
+    .Typography,
+    .Typography05,
+    .Typeface,
+    .Secondary {
+        width: 100%;
+    }
+
+    /* Hình ảnh full width, canh giữa */
+    .intro-continued2 img,
+    .intro-wrapper3>div img,
+    .Primary-Lockup img,
+    .Clearspace img,
+    .Secondary img,
+    .Partnerships img,
+    .Typography05 img,
+    .gradient_palette img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 12px 0;
+    }
+
+    /* Sample copy: 2 cột → 1 cột */
+    .sample-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Màu: tròn lại như bạn yêu cầu */
+    .mau1 div,
+    .mau2 div,
+    .mau3 div,
+    .mau4 div {
+        width: clamp(100px, 30vw, 150px);
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+    }
+
+    .mau {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .mau>div {
+        flex: 1 1 45%;
+    }
+
+    /* Gradient palette chiếm full */
+    .gradient_palette {
+        width: 100%;
+    }
+
+    .box-img04total {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    /* Typography title block */
+    .wrapper {
+        max-width: 100%;
+        margin: 24px 0;
+    }
+
+    .Clear {
+        font-size: 32px;
+        line-height: 1.1;
+    }
+
+    .meta-line {
+        font-size: 11px;
+        gap: 8px;
+    }
+
+    /* Nhỏ lại heading trong kame / typeface */
+    .kame h1 {
+        font-size: 28px;
+    }
+
 
 
 }
