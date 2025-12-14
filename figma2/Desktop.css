@@ -481,6 +481,7 @@
   border-right: 1px solid #333333;
   border-left: 1px solid #333333;
   border-top: 1px solid #333333;
+  border-bottom: 1px solid #333333;
   background: #262626;
 }
 
@@ -570,4 +571,128 @@
 
 .btn-Open:hover {
   background: #333333;
+}
+
+.faq {
+  width: 100%;
+  background: #171717;
+  border: 1px solid #2a2a2a;
+}
+
+.faq-wrap {
+  display: flex;
+  width: 100%;
+}
+
+
+.faq-col {
+  flex: 1;
+  border-right: 1px solid #2a2a2a;
+}
+
+.faq-col:last-child {
+  border-right: none;
+}
+
+
+.faq-item {
+  padding: 18px 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+
+.faq-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+
+.faq-num {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  object-fit: cover;
+  background: #222;
+  border: 1px solid #2a2a2a;
+}
+
+
+.faq-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+  gap: 16px;
+  padding-top: 2px;
+}
+
+.faq-q {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  max-width: 520px;
+
+}
+
+
+.faq-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  border: 1px solid #2a2a2a;
+  background: #202020;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.faq-toggle img {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+
+.faq-body {
+  display: none;
+  margin-top: 10px;
+  margin-left: calc(48px + 16px);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+
+
+.faq-item:last-child {
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.faq-item.open .faq-body {
+  display: block;
+}
+
+.khung {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #333333;
+  background-color: var(--backgroundnavbar);
+  display: flex;
+}
+
+.hey {
+  flex: 1;
+  border-right: 1px solid #333333;
 }
