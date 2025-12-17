@@ -1,33 +1,34 @@
-//2626
-// bài 1
-// let khanh = (nums, fn, init) => {
-//     let accum = init;
-//     nums.forEach((num) => {
-//         accum = fn(accum, num);
-//     });
-//     return accum;
+// Input: arr = [0,10,20,30], fn = function greaterThan10(n) { return n > 10; }
+// Output: [20,30]
+// Explanation:
+// const newArray = filter(arr, fn); // [20, 30]
+// The function filters out values that are not greater than 10
+// const khanh = (functions) => {
+//     return (x) => {
+//         for (let i = functions.length - 1; i >= 0; i--) {
+//             x = functions[i](x)
+//         }
+//         return x
+//     }
 // }
-// nums = [1, 2, 3, 4];
-// console.log(khanh(nums, (a, b) => a + b, 0));
-// bai 2
-// let khanh = (nums, fn, init) => {
-//     let accum = init;
-//     nums.forEach((num) => {
-//         accum = fn(accum, num);
-//     });
-//     return accum;
-// }
-// nums = [1, 2, 3, 4];
-// console.log(khanh(nums, (a, b) => a + (b * b), 100));
-// bai3
-// let khanh = (nums, fn, init) => {
-//     let accum = init;
+// const functions = [x => x + 1, x => x * x, x => 2 * x];
 
-//     nums.forEach((num) => {
-//         accum = fn(accum, num);
-//     });
+// const ketqua = khanh(functions);
+// const functions = [x => 10 * x, x => 10 * x, x => 10 * x];
+// const x = 1;
+// Input: arr = [0,10,20,30], fn = function greaterThan10(n) { return n > 10; }
+// Output: [20,30]
+// Explanation:
+// const newArray = filter(arr, fn); // [20, 30]
+// The function filters out values that are not greater than 10
+// const filter = function(arr, fn) {
+//   const result = [];
 
-//     return accum;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (fn(arr[i])) {
+//       result.push(arr[i]);
+//     }
+//   }
+
+//   return result;
 // };
-// nums = [];
-// console.log(khanh(nums, (a, b) => a + b, 25));
