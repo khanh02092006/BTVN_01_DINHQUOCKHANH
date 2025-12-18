@@ -1,9 +1,9 @@
 
 
 // test
-[123].map((item)=>{
+[123].map((item) => {
     console.log(item + 2);
-    
+
 })
 // làm chỉ trên 1 project
 
@@ -12,6 +12,7 @@
 
 // You may assume the array is the output of JSON.parse.
 
-Array.prototype.last = function() {
- return true  
+Array.prototype.last = function () {
+    return true
 };
+
