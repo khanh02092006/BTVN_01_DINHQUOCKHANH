@@ -21,6 +21,7 @@ validate(username, rowmessname);
 validate(address, rowmessadrees);
 validate(password, rowmesspassword);
 
+
 sumbit.addEventListener("click", (e) => {
     e.preventDefault();
     let check = true
@@ -65,6 +66,9 @@ clear.addEventListener("click", () => {
     username.value = "";
     address.value = "";
     password.value = ""
+    rowmessadrees.style.display = "none"
+    rowmessname.style.display = "none"
+    rowmesspassword.style.display = "none"
     clear.style.display = "none";
 })
 
