@@ -39,9 +39,9 @@ const checksumbit = () => {
   const passwordvalide = matkhau.trim() !== "" && matkhau.length >= 6
   const addressvalide = diachi.trim() !== ""
   if (namevalidate && passwordvalide && addressvalide) {
-    sumbit.style.display = "block"
+    sumbit.disabled = false;
   } else {
-    sumbit.style.display = "none"
+    sumbit.disabled = true;
   }
 
 }
@@ -101,6 +101,7 @@ sumbit.addEventListener("click", (e) => {
     rAddress.textContent = address.value
     rPassword.textContent = password.value
     resultBox.style.display = "block"
+    checksumbit()
 
 
     username.value = ""
@@ -133,6 +134,8 @@ clear.addEventListener("click", () => {
   rowmessadrees.style.display = "none"
   rowmessname.style.display = "none"
   rowmesspassword.style.display = "none"
+  errnamekytu.style.display = "none"
+  errpassworrk.style.display = "none"
   clear.style.display = "none";
   checksumbit();
 })
