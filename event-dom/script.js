@@ -1,34 +1,78 @@
+const username = document.querySelector(".usernameinput")
+const address = document.querySelector(".addressinput")
+const password = document.querySelector(".passwordinput")
+const rowmessname = document.querySelector(".msg1");
+const rowmessadrees = document.querySelector(".msg2");
+const rowmesspassword = document.querySelector(".msg3");
+const sumbit = document.querySelector(".Submit");
+
+const clear = document.querySelector(".clear")
+const resultBox = document.querySelector(".result");
+const rName = document.querySelector(".r-name");
+const rAddress = document.querySelector(".r-address");
+const rPassword = document.querySelector(".r-password");
+
+const validate = (input, err) => {
+    input.addEventListener("input", () => {
+        err.style.display = input.value.trim() === "" ? "block" : "none";
+    })
+}
+validate(username, rowmessname);
+validate(address, rowmessadrees);
+validate(password, rowmesspassword);
 
 
-const btn = document.querySelector(".btn")
-const input = document.querySelector(".input")
-const parent = document.querySelector(".parent")
-const text = document.querySelector(".text")
-const red = document.querySelector(".red")
+sumbit.addEventListener("click", (e) => {
+    e.preventDefault();
+    let check = true
+    const ten = username.value
+    const matkhau = password.value
+    const diachi = address.value
+    rowmessname.style.display = "none";
+    rowmessadrees.style.display = "none";
+    rowmesspassword.style.display = "none";
+    if (ten.trim() === "") {
+        rowmessname.style.display = "block";
+        check = false
+    }
+    if (matkhau === "") {
+        rowmesspassword.style.display = "block";
+        check = false
+    }
+    if (diachi.trim() === "") {
+        rowmessadrees.style.display = "block";
+        check = false
+    }
+    if (check) {
+        rName.textContent = username.value;
+        rAddress.textContent = address.value
+        rPassword.textContent = password.value
+        resultBox.style.display = "block"
+    }
 
-// call back function
-// input.addEventListener("keydown", (e)=>{
-//     console.log(e.target);
-    
-// })
 
-parent.addEventListener("click",(e)=>{
-    console.log("parent");
-    
+})
+const btnclear = () => {
+    const have = username.value.trim() !== "" ||
+        address.value.trim() !== "" ||
+        password.value.trim() !== "";
+    clear.style.display = have ? "block" : "none";
+
+}
+[username, address, password].forEach((input) => {
+    input.addEventListener("input", btnclear)
+})
+clear.addEventListener("click", () => {
+    username.value = "";
+    address.value = "";
+    password.value = ""
+    rowmessadrees.style.display = "none"
+    rowmessname.style.display = "none"
+    rowmesspassword.style.display = "none"
+    clear.style.display = "none";
 })
 
-btn.addEventListener("click", (e)=>{
-    e.stopPropagation()
-    console.log(typeof parent.innerHTML);
-    text.classList.toggle("red")
-})
 
-// innerText, textContent, và innerHTML
 
-// element.style.tên-css
 
-// add class, remove class, toggle trong js
 
-// getAttribute , setAttribute
-text.setAttribute("class", "red")
-console.log(text.getAttribute("id"));
