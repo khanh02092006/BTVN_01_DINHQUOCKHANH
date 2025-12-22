@@ -18,6 +18,8 @@
 
 }
 
+
+
 .username,
 .address,
 .password {
@@ -35,6 +37,19 @@
 label {
     font-size: 14px;
     font-weight: 600;
+}
+
+.password {
+    position: relative;
+
+}
+
+.show-password {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 27px;
+    right: 5px;
 }
 
 input {
@@ -57,6 +72,18 @@ input:focus {
     color: red;
     display: none;
 
+}
+
+.check_passwor {
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+.check_ten {
+    font-size: 12px;
+    color: red;
+    display: none;
 }
 
 .btn {
