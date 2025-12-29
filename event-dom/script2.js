@@ -91,9 +91,14 @@ sumbit.addEventListener("click", (e) => {
     rowmessadrees.style.display = "block";
     check = false
   }
-  if (matkhau.length < 6) {
+  if (matkhau.trim().length < 6) {
     errpassworrk.style.display = "block";
     check = false
+  }
+  if (ten.trim().length < 4 || ten.trim().length > 20) {
+    errnamekytu.style.display = "block"
+    check = false
+
   }
 
   if (check) {
@@ -108,11 +113,7 @@ sumbit.addEventListener("click", (e) => {
     password.value = ""
     address.value = ""
   }
-  if (ten.length < 4 || ten.length > 20) {
-    errnamekytu.style.display = "block"
-    check = false
 
-  }
 
 
 })
