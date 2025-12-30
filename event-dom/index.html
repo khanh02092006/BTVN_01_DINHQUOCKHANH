@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <form action="" class="formfiead">
+    <form action="" class="formfiead" style="display: flex; margin-top: 100px; justify-content: center; align-items: center;">
         <div class="username">
             <label>User name</label>
             <input class="usernameinput" type="text" placeholder="Nhập user name..." />
@@ -23,18 +24,21 @@
         </div>
         <div class="password">
             <label>password</label>
-            <input class="passwordinput" type="password" placeholder="Nhập mật khẩu..." />
+            <div style="display: flex; align-items: center; gap: 4px;">
+                <input style="flex: 1;" class="passwordinput" type="password" placeholder="Nhập mật khẩu..." />
+                <i class="fa-solid fa-eye show-password" style="cursor: pointer;"></i>
+                <i class="fa-sharp fa-solid fa-eye-slash hidden-password"  style="cursor: pointer;"></i>
+            </div>
             <div class="msg3">password không được để trống</div>
             <div class="check_passwor">mật khẩu phải có ít nhất 6 kí tự </div>
 
-            <input type="checkbox" class="show-password" />
-
+            <!-- <input type="checkbox" class="show-password" /> -->
 
 
         </div>
-        <div class=" btn">
-            <button type="button" class="clear"> clear</button>
-            <button type="submit" class="Submit"> Submit</button>
+        <div class=" btn" style="margin-top: 10px;">
+            <button type="button" class="clear" style="cursor: pointer;"> clear</button>
+            <button type="submit" class="Submit" style="cursor: pointer;"> Submit</button>
         </div>
         <div class="result" ">
  
@@ -44,6 +48,26 @@
         </div>
 
     </form>
+    <div class="profile hidden">
+        <div class="profile-card">
+            <img 
+                src="https://i.pravatar.cc/120"
+                alt="avatar"
+                class="avatar"
+            />
+
+            <h2 class="profile-name">Nguyen Van A</h2>
+            <p class="profile-address">Nam Dinh</p>
+
+            <div class="profile-info">
+                <p><b>User name:</b> <span class="p-username"></span></p>
+                <p><b>Address:</b> <span class="p-address"></span></p>
+            </div>
+
+            <button class="logout">Logout</button>
+            </div>
+    </div>
+    <div class="display"></div>
     <!-- <script src="./script.js"></script> -->
     <script src="./script2.js"></script>
 </body>
