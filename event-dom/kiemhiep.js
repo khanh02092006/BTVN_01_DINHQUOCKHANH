@@ -40,7 +40,7 @@ async function featchchaer() {
       <div class="content-header">THÔNG TIN TRUYỆN:</div>
       <h1 class="story-title">${first.name}</h1>
 
-      <div class="story-intro">${first.description |}</div>
+      <div class="story-intro">${first.description}</div>
       <div class="section-title">Giới thiệu nội dung:</div>
 
             <div class="dialogue">
