@@ -1,20 +1,16 @@
 const container = document.querySelector(".container");
 
-async function featchchaer() {
+async function fetchCharacters() {
     const res = await fetch("https://zelda.fanapis.com/api/characters?limit=10");
-    console.log("res", res)
     const data = await res.json();
-    console.log(" data", data)
     const list = data.data;
-    console.log("list", list)
-
 
     const first = list[0];
 
-
-    let sidebarHTML = "";
-    list.slice(1).forEach((item, index) => {
-        sidebarHTML += `
+    const sidebarHTML = (list) => {
+        let HTML = "";
+        list.forEach((item, index) => {
+            HTML += `
       <div class="story-item">
         <div class="rank-number">${index + 1}</div>
         <div class="story-info">
@@ -23,10 +19,12 @@ async function featchchaer() {
         </div>
       </div>
     `;
-    });
+        });
+        return HTML;
+    };
 
-
-    container.innerHTML = `
+    const renderLayout = (first, sidebarHTML) => {
+        container.innerHTML = `
     <div class="left-sidebar">
       <img src="https://genk.mediacdn.vn/k:2016/1-1465352650525/5-ly-do-khien-soai-ca-kiem-hiep-duoc-van-nguoi-me.jpg"
         alt="Vạn Cổ Đệ Nhất Thần" class="book-cover">
@@ -79,6 +77,10 @@ async function featchchaer() {
       ${sidebarHTML}
     </div>
   `;
+    };
+
+    const sidebar = sidebarHTML(list.slice(1));
+    renderLayout(first, sidebar);
 }
 
-featchchaer();
+fetchCharacters();
