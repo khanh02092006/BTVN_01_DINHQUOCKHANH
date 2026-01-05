@@ -1,9 +1,9 @@
 const container = document.querySelector(".container");
 
 const sidebarHTML = (list) => {
-    let HTML = "";
-    list.forEach((item, index) => {
-        HTML += `
+  let HTML = "";
+  list.forEach((item, index) => {
+    HTML += `
       <div class="story-item">
         <div class="rank-number">${index + 1}</div>
         <div class="story-info">
@@ -12,12 +12,12 @@ const sidebarHTML = (list) => {
         </div>
       </div>
     `;
-    });
-    return HTML;
+  });
+  return HTML;
 };
 
 const renderLayout = (first, sidebarHtmlString) => {
-    container.innerHTML = `
+  container.innerHTML = `
     <div class="left-sidebar">
       <img src="https://genk.mediacdn.vn/k:2016/1-1465352650525/5-ly-do-khien-soai-ca-kiem-hiep-duoc-van-nguoi-me.jpg"
         alt="Vạn Cổ Đệ Nhất Thần" class="book-cover">
@@ -47,14 +47,17 @@ const renderLayout = (first, sidebarHtmlString) => {
 };
 
 async function fetchCharacters() {
-    const res = await fetch("https://zelda.fanapis.com/api/characters?limit=10");
-    const data = await res.json();
-    const list = data.data;
+  const res = await fetch("https://zelda.fanapis.com/api/characters?limit=10");
+  const data = await res.json();
+  const list = data.data;
 
-    const first = list[0];
-    const sidebar = sidebarHTML(list.slice(1));
+  const first = list[0];
+  const sidebar = sidebarHTML(list.slice(1));
 
-    renderLayout(first, sidebar);
+  renderLayout(first, sidebar);
 }
 
 fetchCharacters();
+
+
+
