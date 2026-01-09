@@ -9,7 +9,6 @@ const renderProfile = (data) => {
 };
 
 const user = localStorage.getItem("USER")
-const token = localStorage.getItem("TOKEN")
 
 renderProfile(JSON.parse(user))
 

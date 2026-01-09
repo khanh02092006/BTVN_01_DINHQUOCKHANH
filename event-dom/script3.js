@@ -57,17 +57,20 @@ const fetchLogin = async (user) => {
   const res = await fetch(urlLogin, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username: user.userName, password: user.password }),
+    body: JSON.stringify({ username: user.userName , password: user.password})
   });
 
   res.json().then((data) => {
     if (data.accessToken) {
       setLocalStoreage(key_token, data.accessToken);
-      setLocalStoreage(key_user, JSON.stringify({
-        username: data.username,
-        email: data.email,
-        image: data.image,
-      }));
+      setLocalStoreage(
+        key_user,
+        JSON.stringify({
+          username: data.username,
+          email: data.email,
+          image: data.image,
+        })
+      );
       alert(`Hi ${data.username} bạn đã đăng nhập thành công`);
       window.location.href = "/event-dom/profile.html";
     }
