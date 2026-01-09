@@ -83,36 +83,7 @@ closeModal.addEventListener("click", () => {
 });
 
 
-// addForm.addEventListener("submit", async (e) => {
-//   e.preventDefault();
 
-//   const payload = {
-//     name: document.getElementById("name").value,
-//     username: document.getElementById("username").value,
-//     knownIps: [
-//       document.getElementById("ip1").value,
-//       document.getElementById("ip2").value,
-//     ],
-//     profile: {
-//       firstName: document.getElementById("firstName").value,
-//       lastName: document.getElementById("lastName").value,
-//       staticData: document
-//         .getElementById("staticData")
-//         .value
-//         .split(",")
-//         .map(Number),
-//     },
-//   };
-
-//   await fetch("https://69606493e7aa517cb795f700.mockapi.io/users", {
-//     method: "POST",
-//     headers: { "Content-Type": "application/json" },
-//     body: JSON.stringify(payload),
-//   });
-
-//   modal.style.display = "none";
-//   featchUser(); // load lại list
-// });
 const nameinput = document.getElementById("name");
 const username = document.getElementById("username");
 const ip1 = document.getElementById("ip1");
