@@ -11,6 +11,8 @@ const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
 const staticData = document.getElementById("staticData");
 const key_username = "USERNAMEUSER";
+const submit = document.querySelector(".submit");
+const text = document.querySelector(".text");
 const featchUser = async () => {
     const res = await fetch("https://69606493e7aa517cb795f700.mockapi.io/users?limit=12");
     res.json().then((data) => {
@@ -45,28 +47,65 @@ userGrid.addEventListener("click", async (e) => {
     if (!card) return;
     const id = card.id;
 
-
     if (e.target.closest(".btn-danger")) {
-        await featchdelete(id, card);
+        await featchdelete(id, "DELETE");
+        return;
+    }
+    if (e.target.closest(".btn-success")) {
+        editUserId = id;
+        fetchupdate(id);
         return;
     }
 
 
-
-
     window.location.href = `profile.html?id=${id}`;
 });
+featchUser();
+const fetchupdate = async (id) => {
+    editUserId = id;
+    modal.style.display = "block";
+    submit.textContent = "Update User";
+    text.textContent = "Update User";
+    submit.setAttribute("Type", "button");
 
-const featchdelete = async (id, card) => {
-    await fetch(`https://69606493e7aa517cb795f700.mockapi.io/users/${id}`, {
-        method: "DELETE",
+    const res = await fetch(`https://69606493e7aa517cb795f700.mockapi.io/users/${id}`, {
+        method: "GET"
     });
+    res.json().then((data) => {
+        nameinput.value = data.name;
 
-    card.remove();
+    })
 
+}
+submit.addEventListener("click", async () => {
+    const names = nameinput.value
+    const payload = {
+        name: names,
+        username: username.value,
+        knownIps: [
+            ip1.value,
+            ip2.value,
+        ],
+        profile: {
+            firstName: firstName.value,
+            lastName: lastName.value,
+            staticData: staticData.value.split(",").map(Number),
+        },
+    };
+    featchUpdateUser(editUserId, payload)
+    modal.style.display = "none";
+    featchUser();
+})
+const featchdelete = async (id, method = "DELETE") => {
+    const res = await fetch(`https://69606493e7aa517cb795f700.mockapi.io/users/${id}`, {
+        method: `${method}`
+    });
+    if (method === "GET") {
+        return res
+    }
+    featchUser();
 };
 
-featchUser();
 
 
 
