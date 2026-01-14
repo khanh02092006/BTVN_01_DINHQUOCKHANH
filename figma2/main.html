@@ -35,6 +35,10 @@
         <a href="">Careers</a>
       </li>
     </ul>
+    <div class="auth-buttons">
+      <button class="btn-login-open">Đăng nhập</button>
+      <button class="btn-register-open">Đăng ký</button>
+    </div>
     <div class="btn-Contact"> Contact Us</div>
   </header>
   <div class="main">
@@ -616,6 +620,92 @@
 
 
 
+
+  <div class="modal-overlay">
+    <div class="modal-container">
+
+
+      <div class="modal-close">×</div>
+
+
+      <div class="modal-header">
+        <h2 class="modal-title"> đăng nhập </h2>
+      </div>
+
+
+      <form id="loginForm">
+
+
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" id="emailInput" placeholder="Enter your email" required>
+        </div>
+        <div class="msg1"> email không được để trống</div>
+
+
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <div class="password-wrapper">
+            <input type="password" class="form-input" id="passwordInput" placeholder="Enter your password" required>
+
+          </div>
+        </div>
+        <div class="msg2"> password không được để trống</div>
+
+
+
+
+
+        <button type="submit" class="btn-login">Login</button>
+      </form>
+
+
+
+    </div>
+  </div>
+
+
+  <div class="register-modal-overlay">
+    <div class="modal-container">
+      <div class="register-modal-close">×</div>
+
+      <div class="modal-header">
+        <h2 class="modal-title">Đăng ký tài khoản</h2>
+      </div>
+
+      <form id="registerForm">
+        <div class="form-group">
+          <label class="form-label">Họ và tên</label>
+          <input type="text" class="form-input" id="registerName" placeholder="Nhập họ tên">
+        </div>
+        <div class="register-msg-name">Tên không được để trống</div>
+
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-input" id="registerEmail" placeholder="Nhập email">
+        </div>
+        <div class="register-msg-email">Email không được để trống</div>
+
+        <div class="form-group">
+          <label class="form-label">Mật khẩu</label>
+          <input type="password" class="form-input" id="registerPassword" placeholder="Nhập mật khẩu">
+        </div>
+        <div class="register-msg-password">Mật khẩu không được để trống</div>
+
+        <div class="form-group">
+          <label class="form-label">Xác nhận mật khẩu</label>
+          <input type="password" class="form-input" id="registerConfirmPassword" placeholder="Nhập lại mật khẩu">
+        </div>
+        <div class="register-msg-confirm">Xác nhận mật khẩu không khớp</div>
+
+        <button type="submit" class="btn-register">Đăng ký</button>
+
+
+      </form>
+    </div>
+  </div>
+
+  <script src="./desktop.js"></script>
 </body>
 
 </html>
