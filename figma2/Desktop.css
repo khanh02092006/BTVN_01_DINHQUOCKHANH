@@ -49,14 +49,16 @@ body {
   padding: 10px 20px;
   border-radius: 12px;
   display: inline-block;
-
+  /* transition: 2s all ease; */
 }
 
 .link-nav a:hover {
   background-color: #333333;
   color: white;
   border-radius: 12px;
-
+  /* transform: scale(1.4); */
+  /* transform: translateX(-20px); */
+  /* transform: translateY(-20px); */
 }
 
 .logo span {
@@ -142,8 +144,16 @@ body {
   background: #151515;
   border-radius: 8px;
   width: fit-content;
+  /* animation: mymove 10s; */
 }
 
+/* @keyframes mymove {
+  0%   {margin-left: 0px;}
+  25%  {margin-left: 200px;}
+  50%  {margin-left: 100px;}
+  75%  {margin-left: 200px;}
+  100% {margin-left: 0px;}
+} */
 
 .pill-label {
   color: #9ca3af;
